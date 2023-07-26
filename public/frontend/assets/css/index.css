@@ -1,0 +1,216 @@
+/* Essence Button */
+.academy-btn {
+  display: inline-block;
+  min-width: 160px;
+  height: 65px;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 65px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  background: #9c27b0;
+  background-image: -webkit-linear-gradient(left, #500f5b 0%, #9c27b0 51%, #500f5b 100%);
+  background-image: linear-gradient(to right, #500f5b 0%, #9c27b0 51%, #500f5b 100%);
+  font-weight: 600;
+}
+
+.academy-btn.btn-sm {
+  min-width: 110px;
+  padding: 0 20px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.academy-btn.active,
+.academy-btn:hover,
+.academy-btn:focus {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #9c27b0;
+  background: -webkit-linear-gradient(to right, #9c27b0, #500f5b);
+  background: linear-gradient(to right, #9c27b0, #500f5b);
+}
+
+.academy-btn.btn-2 {
+  background: #141414;
+}
+
+.academy-btn.btn-2:hover,
+.academy-btn.btn-2:focus {
+  background: #9c27b0;
+}
+
+.academy-btn.btn-3 {
+  background: #9c27b0;
+}
+
+.academy-btn.btn-3:hover,
+.academy-btn.btn-3:focus {
+  background: #141414;
+}
+
+.academy-btn.btn-4 {
+  background: #ffffff;
+  border: 2px solid #9c27b0;
+  color: #606060;
+}
+
+.academy-btn.btn-4:hover,
+.academy-btn.btn-4:focus {
+  background: #9c27b0;
+  color: #ffffff;
+}
+
+/*botones de inicio y estado*/
+
+/* Essence Button */
+.academy-courses-area {
+  margin-top: 70px;
+  /* Puedes ajustar el valor según cuánto deseas desplazar el botón hacia abajo */
+}
+
+/* Estilos para el botón personalizado */
+.btn.btn-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  height: 65px;
+  color: #ffffff;
+  border: none;
+  border-radius: 19.25rem;
+  padding: 10px;
+  font-size: 14px;
+  /* line-height: 1; */ /* Elimina o ajusta esta propiedad */
+  transition: all 500ms;
+  background: #9c27b0;
+  background-image: linear-gradient(to right, #500f5b 0%, #9c27b0 51%, #500f5b 100%);
+  font-weight: 600;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+/* Estilos para el botón activo y al pasar el mouse */
+.btn.btn-start.active,
+.btn.btn-start:hover,
+.btn.btn-start:focus {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #9c27b0;
+  background: linear-gradient(to right, #9c27b0, #500f5b);
+}
+
+/* Estilos para diferentes variaciones de botón */
+.btn.btn-start.btn-2 {
+  background: #141414;
+}
+
+.btn.btn-start.btn-2:hover,
+.btn.btn-start.btn-2:focus {
+  background: #9c27b0;
+}
+
+.btn.btn-start.btn-3 {
+  background: #9c27b0;
+}
+
+.btn.btn-start.btn-3:hover,
+.btn.btn-start.btn-3:focus {
+  background: #141414;
+}
+
+.btn.btn-start.btn-4 {
+  background: #ffffff;
+  border: 2px solid #9c27b0;
+  color: #606060;
+}
+
+.btn.btn-start.btn-4:hover,
+.btn.btn-start.btn-4:focus {
+  background: #9c27b0;
+  color: #ffffff;
+}
+
+
+
+
+
+/* contenedor------ */
+
+
+.contenedor-articulo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+/* Estilos específicos para el diseño responsivo de dos columnas */
+.articulo {
+  width: 230px;
+  text-align: center;
+  /* Alineamos el texto a la izquierda */
+  background-color: #9c61ba;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  box-shadow: 0 15px 0 #fff, inset 0 -15px 0 rgba(176, 21, 21, 0.24), 0 45px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 45px 30px 60px 30px;
+  transition: 0.5s;
+  color: aliceblue;
+}
+
+.articulo>img {
+  position: relative;
+  /* background: #ffffff; */
+  background: rgb(20, 85, 215);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 15px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 0 #fff;
+  padding-top: 20px;
+  z-index: 1;
+  display: inline-block;
+  width: 140px;
+  height: 120px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px #69586c;
+}
+
+/* Media query para ajustar el diseño en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .articulo {
+    width: 100%;
+  }
+}
+
+/**/
+.partners-logo {
+  position: relative;
+  z-index: 1;
+}
+
+.partners-logo a {
+  display: inline-block;
+  max-width: 250px;
+}
+
+@media only screen and (max-width: 767px) {
+  .partners-logo a {
+    max-width: 50px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .partners-logo a {
+    max-width: 70px;
+  }
+}
