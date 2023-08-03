@@ -1,8 +1,9 @@
+// JavaScript: Código para el carrusel de imágenes
 const carouselContainer = document.querySelector('.carousel-container');
 const slides = document.querySelectorAll('.carousel-slide');
 
 let counter = 0;
-const intervalTime = 7000; // Cambiar entre imagen y mapa cada 3 segundos
+const intervalTime = 5000; // Cambiar entre imágenes cada 7 segundos (ajustable según tus necesidades)
 
 function nextSlide() {
   counter++;
@@ -24,7 +25,3 @@ function updateCarousel() {
 
 setInterval(nextSlide, intervalTime);
 
-// Función para inicializar el mapa de Google Maps
-function initMap() {
-  // Mantenemos la función initMap() para el mapa de Google Maps si lo necesitas en otras partes de tu proyecto.
-}

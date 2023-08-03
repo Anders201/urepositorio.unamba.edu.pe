@@ -20,11 +20,11 @@ Admins - Admin Panel
 <div class="page-title-area">
     <div class="row align-items-center">
         <div class="col-sm-6">
-            <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Admins</h4>
+            <div class="breadcrumbs-area clearfix">                                                               
+                <h4 class="page-title pull-left">Usuarios</h4>
                 <ul class="breadcrumbs pull-left">
-                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li><span>All Admins</span></li>
+                    <li><a href="{{ route('admin.dashboard') }}">Panel de Administracion</a></li>
+                    <li><span>Usuarios</span></li>
                 </ul>
             </div>
         </div>
@@ -41,10 +41,10 @@ Admins - Admin Panel
         <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title float-left">Admins List</h4>
+                    <h4 class="header-title float-left">Lista de Usuarios</h4>
                     <p class="float-right mb-2">
                         @if (Auth::guard('admin')->user()->can('admin.edit'))
-                            <a class="btn btn-primary text-white" href="{{ route('admin.admins.create') }}">Create New Admin</a>
+                            <a class="btn btn-primary text-white" href="{{ route('admin.admins.create') }}">Crear nuevo usuario</a>
                         @endif
                     </p>
                     <div class="clearfix"></div>
@@ -53,11 +53,11 @@ Admins - Admin Panel
                         <table id="dataTable" class="text-center">
                             <thead class="bg-light text-capitalize">
                                 <tr>
-                                    <th width="5%">Sl</th>
-                                    <th width="10%">Name</th>
-                                    <th width="10%">Email</th>
-                                    <th width="40%">Roles</th>
-                                    <th width="15%">Action</th>
+                                    <th width="5%">N°</th>
+                                    <th width="10%">Nombre</th>
+                                    <th width="30%">Correo</th>
+                                    <th width="20%">Rol</th>
+                                    <th width="15%">Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -75,13 +75,13 @@ Admins - Admin Panel
                                     </td>
                                     <td>
                                         @if (Auth::guard('admin')->user()->can('admin.edit'))
-                                            <a class="btn btn-success text-white" href="{{ route('admin.admins.edit', $admin->id) }}">Edit</a>
+                                            <a class="btn btn-success text-white" href="{{ route('admin.admins.edit', $admin->id) }}">Editar</a>
                                         @endif
                                         
                                         @if (Auth::guard('admin')->user()->can('admin.delete'))
                                         <a class="btn btn-danger text-white" href="{{ route('admin.admins.destroy', $admin->id) }}"
                                         onclick="event.preventDefault(); document.getElementById('delete-form-{{ $admin->id }}').submit();">
-                                            Delete
+                                            Eliminar
                                         </a>
                                         <form id="delete-form-{{ $admin->id }}" action="{{ route('admin.admins.destroy', $admin->id) }}" method="POST" style="display: none;">
                                             @method('DELETE')
@@ -114,7 +114,7 @@ Admins - Admin Panel
      
      <script>
          /*================================
-        datatable active
+        data table active
         ==================================*/
         if ($('#dataTable').length) {
             $('#dataTable').DataTable({

@@ -14,7 +14,7 @@
                             <h4 data-animation="fadeInUp" data-delay="100ms">Repositorio Institucional UNAMBA</h4>
                             <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a la pagina <br>del
                                 repositorio</h2>
-                            <a href="form.php" class="btn academy-btn" target="_blank" data-animation="fadeInUp" data-delay="700ms">Iniciar
+                            <a href="{{ route('form') }}"  class="btn academy-btn" target="_blank" data-animation="fadeInUp" data-delay="700ms">Iniciar
                                 trámite</a>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                             <h4 data-animation="fadeInUp" data-delay="100ms">Repositorio Institucional UNAMBA</h4>
                             <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a la pagina <br>del
                                 repositorio</h2>
-                            <a href="state.php" class="btn academy-btn" target="_blank" data-animation="fadeInUp" data-delay="700ms">Estado
+                            <a href="{{ route('state') }}" class="btn academy-btn" target="_blank" data-animation="fadeInUp" data-delay="700ms">Estado
                                 trámite</a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-course-area mb-10 wow fadeInUp" data-wow-delay="400ms">
                     <div class="state-content text-center"> <!-- Agregar la clase text-center para centrar el contenido -->
-                        <a href="state.php" class="btn btn-start" target="_blank" data-delay="400ms">Estado trámite</a>
+                        <a href="{{ route('form') }}" class="btn btn-start" target="_blank" data-delay="400ms">Inicio trámite</a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="single-course-area mb-10 wow fadeInUp" data-wow-delay="400ms">
                     <div class="state-content text-center"> <!-- Agregar la clase text-center para centrar el contenido -->
-                        <a href="state.php" class="btn btn-start" target="_blank" data-delay="400ms">Estado trámite</a>
+                        <a href="{{ route('state') }}" class="btn btn-start" data-delay="400ms">Estado trámite</a>
                     </div>
                 </div>
             </div>
@@ -170,7 +170,6 @@
                 <div class="partners-logo d-flex align-items-center justify-content-between flex-wrap">
                     <a href="https://www.unamba.edu.pe" target="_blank"><img src="{{ asset('frontend/assets/img/clients-img/Logotipo-UNAMBA-página-web.png') }}" alt=""></a>
                     <a href="https://vrin.unamba.edu.pe" target="_blank"><img src="{{ asset('frontend/assets/img/clients-img/logo-light.png') }}" alt=""></a>
-
                     <a href="https://www.gob.pe/concytec" target="_blank"><img src="{{ asset('frontend/assets/img/clients-img/logo-concytec.png') }}" alt=""></a>
                     <a href="https://alicia.concytec.gob.pe" target="_blank"><img src="{{ asset('frontend/assets/img/clients-img/logo-Alicia.png') }}" alt=""></a>
                 </div>
@@ -178,6 +177,7 @@
         </div>
     </div>
 </div>
+{{--  --}}
 <!-- ##### Partner Area End ##### -->
 
 @include('frontend.layout.footer')

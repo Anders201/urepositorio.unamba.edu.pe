@@ -1,0 +1,88 @@
+.contenedortitle {
+    width: 95%;
+}
+
+.data-tables {
+    display: flex;
+    flex-wrap: wrap;
+    height: 750px;
+}
+
+.left-container {
+    flex: 0 0 70%; /* El contenedor izquierdo ocupará el 65% del espacio disponible */
+    max-width: 100%;
+}
+
+.right-container {
+    flex: 1;
+    max-width: 100%;
+}
+
+.iframe-container {
+    width: 100%;
+    padding-bottom: 60%; /* Ajusta la relación de aspecto al de tu PDF */
+    position: relative;
+}
+
+.outer-div {
+    display: flex; /* Utilizamos flexbox para alinear los divs horizontalmente */
+}
+
+.inner-div {
+    width: 50%; /* Cada div interno ocupará el 50% del ancho del contenedor externo */
+    box-sizing: border-box; /* Asegura que los bordes y el relleno no afecten el ancho del div */
+    /* Añadimos un borde para visualizar los límites de los divs internos */
+     /* Añadimos un relleno para separar el contenido del borde */
+}
+
+
+  /* Estilos para etiquetas */
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  /* Estilos para campos de entrada */
+  .form-container input[type="text"],
+  .form-container select, 
+  .form-container textarea{
+    width: 95%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  /* Estilo específico para el botón de envío */
+  .form-container input[type="submit"] {
+    float: right;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .form-container input[type="button"] {
+    float: right;
+    background-color: #8440fc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+iframe {
+    width: 93%;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

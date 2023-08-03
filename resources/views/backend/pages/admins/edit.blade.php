@@ -2,7 +2,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-Admin Edit - Admin Panel
+Editar Usuario - Admin Panel
 @endsection
 
 @section('styles')
@@ -22,11 +22,11 @@ Admin Edit - Admin Panel
     <div class="row align-items-center">
         <div class="col-sm-6">
             <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Admin Edit</h4>
+                <h4 class="page-title pull-left">Editar Usuario</h4>
                 <ul class="breadcrumbs pull-left">
-                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li><a href="{{ route('admin.admins.index') }}">All Admins</a></li>
-                    <li><span>Edit Admin - {{ $admin->name }}</span></li>
+                    <li><a href="{{ route('admin.dashboard') }}">Panel de Administracion</a></li>
+                    <li><a href="{{ route('admin.admins.index') }}">Usuarios</a></li>
+                    <li><span>Editar Usuario - {{ $admin->name }}</span></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@ Admin Edit - Admin Panel
         <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Edit Admin - {{ $admin->name }}</h4>
+                    <h4 class="header-title">Editar Usuario - {{ $admin->name }}</h4>
                     @include('backend.layouts.partials.messages')
 
                     <form action="{{ route('admin.admins.update', $admin->id) }}" method="POST">
@@ -51,29 +51,29 @@ Admin Edit - Admin Panel
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6 col-sm-12">
-                                <label for="name">Admin Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="{{ $admin->name }}">
+                                <label for="name">Nombre</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="nombre" value="{{ $admin->name }}">
                             </div>
                             <div class="form-group col-md-6 col-sm-12">
-                                <label for="email">Admin Email</label>
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email" value="{{ $admin->email }}">
+                                <label for="email">Correo de Usuario</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="usuario@gmail.com" value="{{ $admin->email }}">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6 col-sm-12">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="ingrese contraseña">
                             </div>
                             <div class="form-group col-md-6 col-sm-12">
-                                <label for="password_confirmation">Confirm Password</label>
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Enter Password">
+                                <label for="password_confirmation">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="confirme contraseñsa">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6 col-sm-6">
-                                <label for="password">Assign Roles</label>
+                                <label for="password">Asignar Roles</label>
                                 <select name="roles[]" id="roles" class="form-control select2" multiple>
                                     @foreach ($roles as $role)
                                         <option value="{{ $role->name }}" {{ $admin->hasRole($role->name) ? 'selected' : '' }}>{{ $role->name }}</option>
@@ -81,12 +81,12 @@ Admin Edit - Admin Panel
                                 </select>
                             </div>
                             <div class="form-group col-md-6 col-sm-6">
-                                <label for="username">Admin Username</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required value="{{ $admin->username }}">
+                                <label for="username">Nombre de Usuario</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="ingrese nombre de usuario" required value="{{ $admin->username }}">
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Save Admin</button>
+                        <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Guardar</button>
                     </form>
                 </div>
             </div>

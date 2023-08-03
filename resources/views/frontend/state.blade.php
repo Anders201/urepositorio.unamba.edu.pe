@@ -14,107 +14,36 @@
     <div class="container">
 
         <!-- Formulario de búsqueda -->
-        <form method="POST" class="search-form">
-            <input type="text" name="search_query" placeholder="Buscar">
-            <button type="submit">Buscar</button>
-        </form>
+    
 
         <!-- Tabla para mostrar los estados de trámite -->
-        <table class="status-table">
-            <thead>
+
+
+
+        <table id="dataTable" class="text-center">
+            <thead class="bg-light text-capitalize">
                 <tr>
-                    <th>Marca temporal</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>DNI</th>
-                    <th>Observaciones</th>
-                    <th>Estado</th>
+                    <th width="1%">N°</th>
+                    <th width="10%">Fecha de envio</th>
+                    <th width="1%">Nombre</th>
+                    <th width="10%">Apellido</th>
+                    <th width="10%">Nombre de Proyecto</th>
+                    <th width="10%">Observacion</th>
+                    <th width="10%">Estado</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Aquí se mostrarán los datos de los estados de trámite -->
-                <!-- Puedes usar PHP para obtener estos datos desde una base de datos -->
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>El informe de Tesis debe colocar en la columna correspondiente cuando realiza la solicitud, Ilegible la pág. del juarado e inclinado, las palabras claves deben ser palabras no oraciones, Objetivos especificos e hipótesis específicos no son las viñetas del formato.</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <tr>
-                    <td>TRAM12345</td>
-                    <td>En proceso</td>
-                    <td>2023-07-19</td>
-                    <td>2023-07-25</td>
-                    <td>2023-07-25</td>
-                    <td>Atendido acercarse a la oficiona</td>
-                </tr>
-                <!-- ... Agrega más filas según sea necesario ... -->
+                @foreach ($tramite as $formulario)
+                    <tr>
+                        <td>{{ $loop->index + 1 }}</td>
+                        <td>{{ $formulario->created_at }}</td>
+                        <td>{{ $formulario->nombre }}</td>
+                        <td>{{ $formulario->apellido }}</td>
+                        <td>{{ $formulario->nombre_proyecto}}</td>
+                        <td>{{ $formulario->observacion }}</td>
+                        <td>{{ $formulario->estado }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

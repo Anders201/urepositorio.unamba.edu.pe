@@ -2,7 +2,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-Role Page - Admin Panel
+Roles - Admin Panel
 @endsection
 
 @section('styles')
@@ -23,8 +23,8 @@ Role Page - Admin Panel
             <div class="breadcrumbs-area clearfix">
                 <h4 class="page-title pull-left">Roles</h4>
                 <ul class="breadcrumbs pull-left">
-                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li><span>All Roles</span></li>
+                    <li><a href="{{ route('admin.dashboard') }}">Panel de Administracion</a></li>
+                    <li><span>Roles</span></li>
                 </ul>
             </div>
         </div>
@@ -41,10 +41,10 @@ Role Page - Admin Panel
         <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title float-left">Roles List</h4>
+                    <h4 class="header-title float-left">Roles</h4>
                     <p class="float-right mb-2">
                         @if (Auth::guard('admin')->user()->can('role.create'))
-                            <a class="btn btn-primary text-white" href="{{ route('admin.roles.create') }}">Create New Role</a>
+                            <a class="btn btn-primary text-white" href="{{ route('admin.roles.create') }}">Crear nuevo Rol</a>
                         @endif
                     </p>
                     <div class="clearfix"></div>
@@ -53,10 +53,10 @@ Role Page - Admin Panel
                         <table id="dataTable" class="text-center">
                             <thead class="bg-light text-capitalize">
                                 <tr>
-                                    <th width="5%">Sl</th>
-                                    <th width="10%">Name</th>
-                                    <th width="60%">Permissions</th>
-                                    <th width="15%">Action</th>
+                                    <th width="5%">N°</th>
+                                    <th width="10%">Nombre</th>
+                                    <th width="60%">Permisos</th>
+                                    <th width="15%">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,13 +73,13 @@ Role Page - Admin Panel
                                     </td>
                                     <td>
                                         @if (Auth::guard('admin')->user()->can('admin.edit'))
-                                            <a class="btn btn-success text-white" href="{{ route('admin.roles.edit', $role->id) }}">Edit</a>
+                                            <a class="btn btn-success text-white" href="{{ route('admin.roles.edit', $role->id) }}">Editar</a>
                                         @endif
 
                                         @if (Auth::guard('admin')->user()->can('admin.edit'))
                                             <a class="btn btn-danger text-white" href="{{ route('admin.roles.destroy', $role->id) }}"
                                             onclick="event.preventDefault(); document.getElementById('delete-form-{{ $role->id }}').submit();">
-                                                Delete
+                                                Eliminar
                                             </a>
 
                                             <form id="delete-form-{{ $role->id }}" action="{{ route('admin.roles.destroy', $role->id) }}" method="POST" style="display: none;">

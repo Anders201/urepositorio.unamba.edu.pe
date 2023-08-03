@@ -7,7 +7,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="footer-widget mb-100">
                         <div class="widget-title">
-                            <a href="#"><img src="img/core-img/LogoReBla.png" alt=""></a>
+                            <a href="#"><img src="{{ asset('frontend/assets/img/core-img/LogoReBla.png') }}"
+                                    alt=""></a>
                         </div>
                         <p>Un repositorio sin límites, donde las ideas fluyen y la creatividad se libera en cada
                             rincón</p>
@@ -40,15 +41,28 @@
                             <h6>Galeria</h6>
                         </div>
                         <div class="gallery-list d-flex justify-content-between flex-wrap">
-                            <a href="img/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/gallery1.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/gallery2.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/gallery3.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/gallery4.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/gallery5.jpg" alt=""></a>
-                            <a href="img/bg-img/gallery6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/gallery6.jpg" alt=""></a>
+                            <a href="{{ asset('frontend/assets/img/bg-img/gallery1.jpg') }}" class="gallery-img"
+                                title="Gallery Image 1"><img
+                                    src="{{ asset('frontend/assets/img/bg-img/gallery1.jpg') }}" alt=""></a>
+                            <a href="{{ asset('frontend/assets/img/bg-img/gallery2.jpg') }}" class="gallery-img"
+                                title="Gallery Image 2"><img
+                                    src="{{ asset('frontend/assets/img/bg-img/gallery2.jpg') }}" alt=""></a>
+                            <a href="{{ asset('frontend/assets/img/bg-img/gallery3.jpg') }}" class="gallery-img"
+                                title="Gallery Image 3"><img
+                                    src="{{ asset('frontend/assets/img/bg-img/gallery3.jpg') }}" alt=""></a>
+                            <a href="{{ asset('frontend/assets/img/bg-img/gallery4.jpg') }}" class="gallery-img"
+                                title="Gallery Image 4"><img
+                                    src="{{ asset('frontend/assets/img/bg-img/gallery4.jpg') }}" alt=""></a>
+                            <a href="{{ asset('frontend/assets/img/bg-img/gallery5.jpg') }}" class="gallery-img"
+                                title="Gallery Image 5"><img
+                                    src="{{ asset('frontend/assets/img/bg-img/gallery5.jpg') }}" alt=""></a>
+                            <a href="{{ asset('frontend/assets/img/bg-img/gallery6.jpg') }}" class="gallery-img"
+                                title="Gallery Image 6"><img
+                                    src="{{ asset('frontend/assets/img/bg-img/gallery6.jpg') }}" alt=""></a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Footer Widget Area -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="footer-widget mb-100">
@@ -76,12 +90,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | This
-                        template is made with <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
+                        </script> All rights reserved | by Rander <i class="fa fa-heart-o"
+                            aria-hidden="true"></i><a href="https://colorlib.com" target="_blank"></a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>
@@ -110,6 +125,19 @@
 <!-- Google Maps -->
 <script src="{{ asset('frontend/assets/js/google-map/map-active.js') }}"></script>
 
-</body>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
 
-</html>
+<script>
+    /*================================
+                        datatable active
+                        ==================================*/
+    if ($('#dataTable').length) {
+        $('#dataTable').DataTable({
+            responsive: true
+        });
+    }
+</script>

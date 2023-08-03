@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900");
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.section-top{
+.section-top {
   scroll-margin-top: 90px;
 }
 
@@ -1212,13 +1212,13 @@ img {
 
 .main-footer-area .footer-widget .useful-links li a:hover,
 .main-footer-area .footer-widget .useful-links li a:focus {
-  color: #69bc5f;
+  color: #500f5b;
 }
 
 .main-footer-area .footer-widget .gallery-list a {
   position: relative;
   z-index: 1;
-  flex: 0 0 66px; 
+  flex: 0 0 66px;
   max-width: 30%;
   margin-bottom: 15px;
   cursor: zoom-in;
@@ -1231,7 +1231,7 @@ img {
   top: 0;
   left: 0;
   content: '';
-  background-color: rgba(97, 186, 109, 0.8);
+  background-color: rgba(92, 11, 87, 0.8);
   opacity: 0;
   visibility: hidden;
   -webkit-transition-duration: 500ms;
@@ -1244,7 +1244,7 @@ img {
 }
 
 .main-footer-area .footer-widget .single-contact i {
-  color: #69bc5f;
+  color: #500f5b;
   font-size: 20px;
   margin-right: 15px;
   padding-top: 7px;
@@ -1512,7 +1512,7 @@ img {
 }
 
 .latest-blog-posts .latest-blog-post-thumb {
-  flex: 0 0 66px; 
+  flex: 0 0 66px;
   max-width: 66px;
   width: 66px;
   margin-right: 15px;
@@ -1574,8 +1574,6 @@ img {
   height: 100%;
   object-fit: cover;
 }
-
-
 
 
 
@@ -1837,29 +1835,36 @@ h1 {
 }
 
 /* Estilos para la tabla de estados de trámite */
-.status-table {
+/* Estilos para la tabla */
+table {
   width: 100%;
   border-collapse: collapse;
-}
-
-.status-table th,
-.status-table td {
   border: 1px solid #ccc;
+}
+
+/* Estilos para las celdas de la tabla */
+th,
+td {
   padding: 10px;
-  text-align: center;
+  border-bottom: 1px solid #ccc;
 }
 
-.status-table th {
-  background-color: #500f5b;
-  color: #fff;
-}
-
-.status-table tr:nth-child(even) {
+/* Estilos para las cabeceras de la tabla */
+th {
   background-color: #f2f2f2;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.status-table tr:hover {
-  background-color: #ddd;
+/* Estilos para resaltar el número de fila */
+tbody tr td:first-child {
+  font-weight: bold;
+}
+
+/* Estilos para toda la sección "top-popular-courses-area" */
+.top-popular-courses-area {
+  background-color: #f9f9f9;
+  padding: 50px 0;
 }
 
 /* para la hoja formato  */

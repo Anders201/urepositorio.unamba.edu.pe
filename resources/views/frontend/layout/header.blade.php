@@ -6,13 +6,14 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 4 meta tags must come first in the head; any other head content must come after these tags -->
 
     <!-- Title -->
     <title>Repositorio-UNAMBA</title>
 
     <!-- repositorio -->
-    <link rel="icon" href="img/core-img/logo-repo.ico">
+    <link rel="icon" href="{{ asset('frontend/assets/img/core-img/logo-repo.ico') }}">
+
 
     <!-- Core Stylesheet -->
     <!-- Estilos personalizados -->
@@ -37,6 +38,12 @@
     <!-- Estilos de Classy Nav -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/classy-nav.min.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -60,7 +67,9 @@
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
-                                <a href="index.html"><img src="{{ asset('frontend/assets/img/core-img/logo_repolargo.png') }}" alt="Logo Repolargo"></a>
+                                <a href="index.html"><img
+                                        src="{{ asset('frontend/assets/img/core-img/logo_repolargo.png') }}"
+                                        alt="Logo Repolargo"></a>
                             </div>
                             <div class="login-content">
                                 <a href="#"></a>
@@ -97,24 +106,27 @@
                                     <li><a href="{{ route('index') }}">INICIO</a></li>
                                     <li><a href="{{ route('format') }}">Formatos</a>
                                         <ul class="dropdown">
-                                            <li><a href="#proyectos">de Proyectos</a></li>
-                                            <li><a href="#informes">de informes</a></li>
-                                            <li><a href="#posgrado">de posgrado</a></li>
+                                            <li><a href="{{ route('proyectos') }}">de Proyectos</a></li>
+                                            <li><a href="{{ route('informes') }}">de informes</a></li>
+                                            <li><a href="{{ route('posgrado') }}">de posgrado</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">GUIAS</a>
                                         <ul class="dropdown">
-                                            <li><a href="https://www.iso.org/sites/directives/current/part2/index.xhtml" target="_blank">ISO 690</a></li>
-                                            <li><a href="https://normas-apa.org/estructura/tablas/" target="_blank">APA</a></li>
-                                            <li><a href="https://drive.google.com/file/d/1_Co8cqjeeDVZqGXZWdhOxiy_lS2m_mVC" target="_blank">Vancouver</a></li>
+                                            <li><a href="https://www.iso.org/sites/directives/current/part2/index.xhtml"
+                                                    target="_blank">ISO 690</a></li>
+                                            <li><a href="https://normas-apa.org/estructura/tablas/"
+                                                    target="_blank">APA</a></li>
+                                            <li><a href="https://drive.google.com/file/d/1_Co8cqjeeDVZqGXZWdhOxiy_lS2m_mVC"
+                                                    target="_blank">Vancouver</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ route('state') }}">Estado Tramite</a></li>
+                                    <li><a href="{{ route('estado_tramite') }}">Estado Tramite</a></li>
                                     <li><a href="{{ route('about-us') }}">nosotros</a></li>
                                     <li><a href="{{ route('contact') }}">Contáctanos</a></li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Nav End -->
                         </div>
 

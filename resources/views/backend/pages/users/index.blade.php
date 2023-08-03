@@ -2,7 +2,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-Users - Admin Panel
+Usuariios - Panel
 @endsection
 
 @section('styles')
@@ -21,10 +21,10 @@ Users - Admin Panel
     <div class="row align-items-center">
         <div class="col-sm-6">
             <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left">Users</h4>
+                <h4 class="page-title pull-left">Usuarios</h4>
                 <ul class="breadcrumbs pull-left">
-                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li><span>All Users</span></li>
+                    <li><a href="{{ route('admin.dashboard') }}">Panel</a></li>
+                    <li><span>todos los Usuarios</span></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +41,7 @@ Users - Admin Panel
         <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title float-left">Users List</h4>
+                    <h4 class="header-title float-left">Lista de Usuarios</h4>
                     <p class="float-right mb-2">
                         <a class="btn btn-primary text-white" href="{{ route('admin.users.create') }}">Create New User</a>
                     </p>
@@ -72,11 +72,11 @@ Users - Admin Panel
                                         @endforeach
                                     </td>
                                     <td>
-                                        <a class="btn btn-success text-white" href="{{ route('admin.users.edit', $user->id) }}">Edit</a>
+                                        <a class="btn btn-success text-white" href="{{ route('admin.users.edit', $user->id) }}">Editar</a>
 
                                         <a class="btn btn-danger text-white" href="{{ route('admin.users.destroy', $user->id) }}"
                                         onclick="event.preventDefault(); document.getElementById('delete-form-{{ $user->id }}').submit();">
-                                            Delete
+                                            Eliminar
                                         </a>
 
                                         <form id="delete-form-{{ $user->id }}" action="{{ route('admin.users.destroy', $user->id) }}" method="POST" style="display: none;">

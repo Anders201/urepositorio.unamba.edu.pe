@@ -2,21 +2,31 @@
 
 
 <!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+<div class="breadcumb-area bg-img"
+    style="background-image: url({{ asset('frontend/assets/img/bg-img/breadcumb.jpg') }});">
     <div class="bradcumbContent">
         <h2>Contacto</h2>
     </div>
 </div>
 <!-- ##### Breadcumb Area End ##### -->
 
-<!-- ##### Google Maps ##### -->
+
 <!-- Carrusel de imágenes y mapas -->
 <div class="carousel-container">
-    <div class="carousel-slide map-area">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.6602031517323!2d-72.87031764519674!3d-13.617553290733943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d031110cca7df%3A0x76b548e9c776d989!2sUniversidad%20Nacional%20Micaela%20Bastidas%20de%20Apurimac%20UNAMBA!5e0!3m2!1ses!2spe!4v1689608920572!5m2!1ses!2spe" style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="carousel-slide">
+        <img src="{{ asset('frontend/assets/img/core-img/ubicacion.jpg') }}" alt="Imagen 1">
     </div>
     <div class="carousel-slide">
-        <img src="img/core-img/ubicacion.jpg" alt="Imagen 1">
+        <img src="{{ asset('frontend/assets/img/core-img/repo4.jpg') }}" alt="Imagen 1">
+    </div>
+    <div class="carousel-slide">
+        <img src="{{ asset('frontend/assets/img/core-img/repo5.jpg') }}" alt="Imagen 1">
+    </div>
+    <div class="carousel-slide">
+        <img src="{{ asset('frontend/assets/img/core-img/repo2.jpg') }}" alt="Imagen 1">
+    </div>
+    <div class="carousel-slide">
+        <img src="{{ asset('frontend/assets/img/core-img/repo3.jpg') }}" alt="Imagen 1">
     </div>
 </div>
 
@@ -71,16 +81,18 @@
                             </div>
                         </div>
                         <!-- Contact Form Area -->
-                        <div class="col-12 col-lg-7">
+                        <div class="col-12 col-lg-6">
+                            <div class="section-heading text-left">
+                                <span>---</span>
+                                <h3>Únete al grupo de WhatsApp </h3>
+                                <p class="mt-30"></p>
+                            </div>
                             <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                                <form action="#" method="post">
-                                    <input type="text" class="form-control" id="name" placeholder="Name">
-                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                    <button class="btn academy-btn mt-30" type="submit">Enviar</button>
-                                </form>
+                                <img src="{{ asset('frontend/assets/img/bg-img/QRrepositorio.png') }}"
+                                    alt="QR Repositorio" class="img-fluid w-100">
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

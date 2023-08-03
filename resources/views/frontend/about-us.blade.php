@@ -55,11 +55,11 @@
                 <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="400ms">
                     <!-- Thumbnail -->
                     <div class="teachers-thumbnail">
-                        <img src="img/bg-img/tea1.jpg" alt="">
+                        <img src="{{ asset('frontend/assets/img/bg-img/incog.jpg') }}" alt="">
                     </div>
                     <!-- Meta Info -->
                     <div class="teachers-info mt-30">
-                        <h5>Mg. Karina Gamarra Peralta</h5>
+                        <h5>Nombre del encargado </h5>
                         <span>ENCARGADO DEL ÁREA</span>
                     </div>
                 </div>

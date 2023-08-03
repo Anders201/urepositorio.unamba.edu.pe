@@ -2318,7 +2318,7 @@ table.dataTable thead td {
 
 .login-form-head {
     text-align: center;
-    background: #8655FC;
+    background: #9c27b0;
     padding: 50px;
 }
 
@@ -2339,6 +2339,10 @@ table.dataTable thead td {
 .login-form-body {
     padding: 50px;
 }
+.login-box {
+    display: flex;
+}
+
 
 .form-gp {
     margin-bottom: 25px;
