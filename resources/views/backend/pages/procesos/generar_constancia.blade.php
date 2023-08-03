@@ -58,7 +58,7 @@
                                                     <td>{{ $constancia->apellido }}</td>
                                                     <td>{{ $constancia->nombre_proyecto }}</td>
                                                     <td>{{ $constancia->handle }}</td>
-                                                    <td><a href="{{route('admin.generar_constancia_pdf',['formulario'=>$constancia->id])}}">Generar</a></td>
+                                                    <td><a href="{{route('admin.generar_constancia_pdf',['formulario'=>$constancia->id])}}" target="_blank">Generar</a></td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
